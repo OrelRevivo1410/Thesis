@@ -295,7 +295,7 @@ plot_permutation_results <- function(test_result, shoe_number) {
 }
 
 # Run analysis on all shoes - original data
-result_all_original <- run_permutation_tests(expected_racs_table_original, shoes = "all", n_permutations = 1000)
+result_all_original <- run_permutation_tests(expected_racs_table_original, shoes = "all", n_permutations = 10000)
 write.csv(result_all_original$summary, "Goodness Of Fit/permutation_test_results_original.csv", row.names = FALSE)
 
 # Additional analysis of results
@@ -330,7 +330,7 @@ if (significant_count_original > 0) {
 }
 
 # Run analysis on all shoes - new data
-result_all_new <- run_permutation_tests(expected_racs_table_new, shoes = "all", n_permutations = 1000)
+result_all_new <- run_permutation_tests(expected_racs_table_new, shoes = "all", n_permutations = 10000)
 write.csv(result_all_new$summary, "Goodness Of Fit/permutation_test_results_new.csv", row.names = FALSE)
 
 # Additional analysis of results
